@@ -1,0 +1,116 @@
+.box {
+  width: 100px;
+  height: 100px;
+  display: inline-block;
+  margin: 5px;
+  background: red;
+  position: fixed;
+  top: 100px;
+  right: calc(30% - 50px);
+  z-index: 10;
+}
+body { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; font-family: 'PT Sans', sans-serif;
+}
+a { color: inherit;
+}
+h1, h2, h3, p, ul, blockquote { width: 700px; margin: 0 auto;
+}
+h1, h2, h3 { font-family: 'PT Sans Caption', sans-serif; font-weight: bold;
+}
+h1 { margin-top: 67px; font-size: 38px; line-height: 45px;
+}
+h1 + p { margin-top: 8px; font-family: 'PT Sans Caption', sans-serif; font-size: 22px; line-height: 32px; color: rgba(0,0,0,.4);
+}
+h1 + p + p { margin-top: 30px;
+}
+h2 { margin-top: 43px; font-size: 32px; line-height: 36px; color: rgba(0, 0, 0, .8);
+}
+h2 + p,
+h2 + blockquote { margin-top: 7px;
+}
+h3 { margin-top: 36px; font-size: 28px; line-height: 34px; color: rgba(0, 0, 0, .8);
+}
+h3 + p,
+h3 + blockquote { margin-top: 6px;
+}
+p, blockquote, li { margin-top: 29px; font-size: 20px; line-height: 34px;
+}
+blockquote {
+  font-style: italic;
+  position: relative;
+  /* border-left: 3px solid black;
+  padding-left: 17px;
+  padding-right: 20px; */
+}
+blockquote::before {
+  content: '';
+  width: 3px;
+  height: 100%;
+  position: absolute;
+  left: -20px;
+  background: black;
+  display: block;
+}
+img { display: block; width: 1020px; margin: 79px auto 0;
+}
+img + h2 { margin-top: 79px;
+}
+img + p,
+img + blockquote,
+img + ul { margin-top: 77px;
+}
+h2 + img { margin-top: 82px;
+}
+h3 + img { margin-top: 81px;
+}
+li {list-style-type: disc;}
+nav {
+  /* background: #999; */
+  width: 200px;
+  display: block;
+  position: fixed;
+  left: 20px;
+  top: 20px;
+  padding: 30px;
+  opacity: .1;
+  transition: all 1s ease;
+}
+nav:hover {
+  opacity: 1;
+  transition: all .2s ease;
+
+}
+nav ul {
+  width: 100%;
+}
+nav li {
+  list-style-type: none;
+  margin: 0;
+  margin-bottom: 20px;
+  font-size: 13px;
+  line-height: 13px;
+  color: black;
+}
+nav ul ul li {
+  color: grey;
+  position: relative;
+  padding-left: 10px;
+  list-style-type: decimal;
+
+}
+nav > ul > li:first-child {
+  font-weight: bold;
+}
+nav a {
+  text-decoration: none;
+}
+nav ul ul li::before {
+  content: '1.';
+  display: block;
+  position: absolute;
+  left: -25px;
+  padding-left: 0;
+  /* margin-left: 10px; */
+  top: 0;
+  width: 10px;
+}
