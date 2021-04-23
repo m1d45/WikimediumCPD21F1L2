@@ -1,7 +1,7 @@
  <!DOCTYPE html>
 <html>
 <head>
-  <meta name="viewport" content="width=device-width">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="stylesheets/style.css">
   <script src="javascripts/jquery-3.5.1.js" charset="utf-8"></script>
   <script src="javascripts/sidebar.js" charset="utf-8"></script>
@@ -10,10 +10,66 @@
   <link rel="icon" type="image/x-icon" href="images/favicon.ico" />
   <link rel="icon" type="image/png" href="images/favicon.png" />
   <title>Дом Наркомфина</title>
+  <style media="screen">
+  body {
+    animation: focus 6s linear infinite;
+  }
+  .dz_test {
+    display: block;
+    position: relative;
+    overflow: hidden;
+    height: 300px;
+  }
+  .dz_test img {
+    margin: 0;
+    width: 100%;
+    /* transform: scale(1); */
+    animation: back 4s linear infinite;
+
+  }
+  .obj {
+    display: block;
+    width: 100px;
+    height: 100px;
+    background: #11ccee;
+    position: absolute;
+    left: calc(50% - 50px);
+    top: calc(50% - 50px);
+    border-radius: 100%;
+    animation: obj 4s linear infinite;
+  }
+
+    @keyframes focus {
+      0% {filter: blur(0); }
+      1% {filter: blur(2px); }
+      2% {filter: blur(0);}
+      3% {filter: blur(2px);}
+      4% {filter: blur(8px);}
+      5% {filter: blur(4px);}
+      6% {filter: blur(1px);}
+      7% {filter: blur(0);}
+      100% {filter: blur(0);}
+    }
+    @keyframes obj {
+      0% {filter: blur(6px);}
+      25% {filter: blur(0);}
+      50% {filter: blur(1px);}
+      75% {filter: blur(0);}
+      100% {filter: blur(6px);}
+    }
+    @keyframes back {
+      0% {filter: blur(0px); transform: scale(1);}
+      15% {filter: blur(0);}
+      35% {filter: blur(8px); transform: scale(1.32);}
+      60% {filter: blur(4px);}
+      100% {filter: blur(0px); transform: scale(1);}
+    }
+
+  </style>
 
 </head>
 <body>
-  
+
 <div class="menubar">
   <a href="index.html"><img src="images/logo.svg"></a>
   <a href="about.html">О проекте</a>
@@ -47,7 +103,10 @@
 <h1 id="s1">Дом Наркомфина</h1>
 
 <p><strong>Дом Наркомфина</strong> — один из ключевых памятников жилой архитектуры <a href="https://ru.wikipedia.org/wiki/Конструктивизм_(искусство)"> конструктивизма,</a> «опытный дом переходного типа». Построен в <a href="https://ru.wikipedia.org/wiki/1928_год">1928—</a><a href="https://ru.wikipedia.org/wiki/1930_год">1930 годах</a> по проекту архитекторов <a href="https://ru.wikipedia.org/wiki/Гинзбург,_Моисей_Яковлевич">Моисея Гинзбурга,</a> <a href="https://ru.wikipedia.org/wiki/Милинис,_Игнатий_Францевич">Игнатия Милиниса</a> и инженера <a href="https://ru.wikipedia.org/wiki/Прохоров,_Сергей_Львович">Сергея Прохорова</a> для работников <a href="https://ru.wikipedia.org/wiki/Народный_комиссариат_финансов_СССР"> Народного комиссариата финансов СССР </a> (Наркомфина). Находится в Москве на  <a href="https://ru.wikipedia.org/wiki/%D0%9D%D0%BE%D0%B2%D0%B8%D0%BD%D1%81%D0%BA%D0%B8%D0%B9_%D0%B1%D1%83%D0%BB%D1%8C%D0%B2%D0%B0%D1%80">Новинском бульваре</a> по адресу дом № 25, корпус 1.</p>
-<img src="images/narkomfin 1.jpg" alt="">
+<div class="dz_test">
+  <img src="images/narkomfin 1.jpg" alt="">
+  <div class="obj"></div>
+</div>
 
 <p>Долгое время находился в аварийном состоянии, был трижды включен в список «100 главных зданий мира, которым грозит уничтожение». В 2017 году началась реставрация по проекту мастерской Алексея Гинзбурга, внука <a href="#">М.Я. Гинзбурга.</a></p>
 <!-- ul>li*3>{Text} -->
